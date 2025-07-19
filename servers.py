@@ -51,6 +51,16 @@ def server_9004():
 
     app.run(host='0.0.0.0', port=9004)
 
+# ---------- Módulo del servidor en puerto 9005 ----------
+def server_9005():
+    app = Flask("server_9005", template_folder='templates')
+
+    @app.route('/')
+    def home():
+        return render_template('campus_profesores.html')  # Usa el nombre de tu HTML real
+
+    app.run(host='0.0.0.0', port=9005)
+
 # ---------- Iniciador de todos los servidores ----------
 def start_all_servers():
     processes = [
@@ -59,6 +69,7 @@ def start_all_servers():
         multiprocessing.Process(target=server_9002),
         multiprocessing.Process(target=server_9003),
         multiprocessing.Process(target=server_9004),
+        multiprocessing.Process(target=server_9005),  
     ]
 
     for p in processes:
