@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SDN</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f9f9f9;
+    }
+    .section-title {
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+    .card {
+      border-radius: 12px;
+      margin-bottom: 1.5rem;
+    }
+    .pdf-icon {
+      color: #0d6efd;
+      margin-right: 10px;
+    }
+  </style>
+  <script src="https://kit.fontawesome.com/a2d9d5a8a1.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  {% include 'includes/navbar.html' %}
+
+  <div class="container mt-4">
+    <h2 class="fw-bold">2025-1 CIBERSEGURIDAD Y TELEMÁTICA FORENSE (TEL122)</h2>
+
+    <!-- Sección General -->
+    <div class="card mt-4">
+      <div class="card-body">
+        <h5 class="section-title">📁 General</h5>
+        <ul class="list-group list-group-flush mt-2">
+          <li class="list-group-item">
+            🗨️ <a href="#">Avisos</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Sección Clases -->
+    <div class="card">
+      <div class="card-body">
+        <h5 class="section-title">📘 Clases</h5>
+        <ul class="list-group list-group-flush mt-2">
+          <li class="list-group-item">
+            <i class="fas fa-file-pdf pdf-icon"></i> <a href="#">Clase 1</a>
+          </li>
+          <li class="list-group-item d-flex align-items-center">
+            <i class="fas fa-file-pdf pdf-icon"></i>
+            <a href="#" class="me-2">Clase 2</a>
+            <img src="{{ url_for('static', filename='ciber.jpg') }}" alt="Ciber" width="100">
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
